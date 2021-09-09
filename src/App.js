@@ -15,7 +15,7 @@ function App() {
       .then(data => {
         setWeather(data.data);
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error('Something went wrong! Try another place'));
   }, []);
 
   return (
