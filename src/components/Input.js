@@ -8,9 +8,10 @@ const Input = ({ weather, setWeather }) => {
   };
   const searchHandler = e => {
     e.preventDefault();
+    setInput('');
     axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=${input}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=${input}&aqi=no`
       )
       .then(data => {
         setWeather(data.data);
