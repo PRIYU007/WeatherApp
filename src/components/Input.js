@@ -16,7 +16,7 @@ const Input = ({ weather, setWeather }) => {
       .then(data => {
         setWeather(data.data);
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error('Something went wrong! Try another place'));
   };
   return (
     <form onSubmit={searchHandler} className="form">
